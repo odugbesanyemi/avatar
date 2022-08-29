@@ -1,0 +1,297 @@
+
+:root{
+    --theme-light:rgb(255, 185, 100);
+    --theme-darker:rgb(255, 213, 0);
+    --pant:rgb(64, 16, 255);
+    --neckTheme:rgb(208, 208, 208);
+}
+#stickman-front-view{
+    position: absolute;
+    width: 400px;
+    background-color: green;
+}
+#stickman-front-view .absolute{
+    position:absolute;
+    left: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+#stickman-front-view .stickman-head{
+    min-width: 60px;
+    min-height: 60px;
+    background-color: var(--theme-darker);
+    border-radius:50% 50% 30% 30%;
+}
+#stickman-front-view .stickman-neck{
+    height: 30px;
+    background-color: var(--neckTheme);
+    width: 20px;
+    top: 45px;
+    border-radius: 5px 5px 0 0;
+}
+#stickman-front-view .stickman-body{
+    height: 80px;
+    background-color: var(--theme-darker);
+    width: 100px;
+    top: calc(75px);
+    border-radius:10px 10px 0 0;
+}
+#stickman-front-view .stickman-pant{
+    height: 40px;
+    background-color: var(--pant);
+    width: 100px;
+    top: calc(60px + 45px + 80px - 30px);
+    border-radius: 0 0 50px 50px;
+}
+#stickman-front-view .stickman-arm{
+    width: 150px;
+    border-radius: 40%;
+    background-color: rgb(120, 120, 120);
+    height: 10px;
+    top: 80px;
+}
+#stickman-front-view .stickman-arm:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--theme-darker);
+    left: -10px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+}
+#stickman-front-view .stickman-arm:after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--theme-darker);
+    left: 95%;
+    border-radius: 50%;
+    position: absolute;
+}
+#stickman-front-view .stickman-arm-left{
+    height: 10px;
+    width: 60px;
+    border-radius: 40%;
+    background-color:gray ;
+    left: 5px;
+    transform: rotate(240deg);
+    transform-origin: left;
+}
+#stickman-front-view .stickman-arm-right{
+    height: 10px;
+    width: 60px;
+    border-radius: 40%;
+    background-color:gray ;
+    left: 100%;
+    transform: rotate(0deg);
+    transform-origin: left;
+    z-index: 0;
+}
+
+/* stickman legs  */
+#stickman-front-view .stickman-leg{
+    width: 50px;
+    border-radius: 40%;
+    background-color: rgb(255, 255, 255);
+    height: 10px;
+    top: calc(60px + 45px + 80px + 40px - 35px);
+}
+#stickman-front-view .stickman-leg:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--pant);
+    left: -10px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+}
+#stickman-front-view .stickman-leg:after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--pant);
+    left: 95%;
+    border-radius: 50%;
+    position: absolute;
+}
+#stickman-front-view .stickman-leg-left{
+    height: 10px;
+    width: 100px;
+    border-radius: 40% 40% 0 0;
+    background-color:gray ;
+    left: 0;
+    transform: rotate(100deg);
+    transform-origin: left;
+}
+#stickman-front-view .stickman-leg-right{
+    height: 10px;
+    width: 100px;
+    border-radius:  0 0 40% 40%;
+    background-color:gray ;
+    left: 105%;
+    transform: rotate(90deg);
+    transform-origin: left;
+}
+#stickman-side-view{
+    position: absolute;
+    background-color: black;
+    width: 400px;
+    left: 60%;
+}
+#stickman-side-view .absolute{
+    position:absolute;
+    left: 60%;
+    margin-right: auto;
+    text-align: center;
+    transform: translateX(-50%);
+}
+/* side view stickman */
+/* all updates */
+#stickman-side-view .stickman-head{
+    min-width: 60px;
+    min-height: 60px;
+    background-color: var(--theme-darker);
+    border-radius:50% 50% 40% 30%;
+}
+#stickman-side-view .stickman-neck{
+    height: 20px;
+    background-color: var(--neckTheme);
+    width: 20px;
+    top: 60px;
+    border-radius: 0px 0px 0 0;
+}
+#stickman-side-view .stickman-body{
+    height: 80px;
+    background-color: var(--theme-darker);
+    width: 100px;
+    top: calc(75px);
+    border-radius:40px 60px 0 0;
+    z-index: -1;
+}
+#stickman-side-view .stickman-pant{
+    height: 40px;
+    background-color: var(--pant);
+    width: 100px;
+    top: calc(60px + 45px + 80px - 30px);
+    border-radius: 0 0 60px 70px;
+    z-index: -2;
+}
+#stickman-side-view .stickman-arm-leftcont{
+    width: 10px;
+    border-radius: 40%;
+    background-color: rgb(120, 120, 120);
+    height: 10px;
+    top: 100px;
+}
+#stickman-side-view .stickman-arm-rightcont{
+    width: 10px;
+    border-radius: 40%;
+    background-color: rgb(120, 120, 120);
+    height: 10px;
+    top: 100px;
+    z-index: -3;
+}
+#stickman-side-view .stickman-arm-leftcont:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--theme-darker);
+    left: -10px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+#stickman-side-view .stickman-arm:after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--theme-darker);
+    left: 95%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -2;
+}
+#stickman-side-view .stickman-arm-left{
+    height: 10px;
+    width: 100px;
+    border-radius: 40%;
+    background-color:gray ;
+    left: 5px;
+    transform: rotate(120deg);
+    transform-origin: left;
+    z-index: 1;
+}
+#stickman-side-view .stickman-arm-right{
+    height: 10px;
+    width: 100px;
+    border-radius: 40%;
+    background-color:gray ;
+    left: 100%;
+    transform: rotate(0deg);
+    transform-origin: left;
+    z-index: -3;
+}
+
+/* stickman legs  */
+#stickman-side-view .stickman-leg{
+    width: 10px;
+    border-radius: 40%;
+    background-color: rgb(255, 255, 255);
+    height: 10px;
+    top: calc(60px + 45px + 80px + 40px - 35px);
+}
+#stickman-side-view .stickman-leg:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color:var(--pant);
+    left: -10px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+}
+#stickman-side-view .stickman-leg:after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color:var(--pant);
+    left: 95%;
+    border-radius: 50%;
+    position: absolute;
+}
+#stickman-side-view .stickman-leg-left{
+    height: 10px;
+    width: 100px;
+    border-radius: 40% 40% 0 0;
+    background-color:gray ;
+    left: 0;
+    transform: rotate(100deg);
+    transform-origin: left;
+}
+#stickman-side-view .stickman-leg-right{
+    height: 10px;
+    width: 100px;
+    border-radius:  0 0 40% 40%;
+    background-color:gray ;
+    left: 105%;
+    transform: rotate(90deg);
+    transform-origin: left;
+}
