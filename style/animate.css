@@ -1,0 +1,35 @@
+.environment{
+    background-color:var(--bg);
+    min-width: 100px;
+    height: 60VH;
+    z-index: -5;
+    padding: 40px 0;
+    position: relative;
+}
+
+button:hover{
+    transform: scale(110%);
+    border: 1px dashed rgb(0, 55, 255);
+}
+@keyframes wavehand {
+    0%{
+        transform: rotate(-180deg);
+    }
+    50%{
+        transform: rotate(-70deg);
+    }
+    100%{
+        transform: rotate(-180deg);
+        transition: ease-in;
+    }
+}
+@keyframes handsmove {
+    0%{transform:rotate(0deg)}
+    50%{transform: rotate(90deg);}
+    100%{transform: rotate(0deg);}
+}
+@keyframes legsmove {
+    0%{transform:rotate(60deg);}
+    50%{transform: rotate(120deg);}
+    100%{transform: rotate(60deg);}
+}

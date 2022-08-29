@@ -4,46 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/animate.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="" id="stickman-front-view">
-        <div class="relative" style="position: relative;">
-            <div class="stickman-head absolute"></div>
-            <div class="stickman-neck  absolute"></div>
-            <div class="stickman-arm absolute">
-                <div class="stickman-arm-left absolute"></div>
-                <div class="stickman-arm-right absolute"></div>
+<section class="environment" style="position: relative; ">
+        <div class="hide stickman" id="stickman-front-view">
+            <div class="relative" style="position: relative;">
+                <div class="stickman-head absolute"></div>
+                <div class="stickman-neck  absolute"></div>
+                <div class="stickman-arm absolute">
+                    <div class="stickman-arm-left absolute"></div>
+                    <div class="stickman-arm-right absolute"></div>
+                </div>
+                <div class="stickman-body absolute"></div>
+                <div class="stickman-pant absolute"></div>
+                <div class="stickman-leg absolute">
+                    <div class="stickman-leg-left absolute"></div>
+                    <div class="stickman-leg-right absolute"></div>
+                </div>            
             </div>
-            <div class="stickman-body absolute"></div>
-            <div class="stickman-pant absolute"></div>
-            <div class="stickman-leg absolute">
-                <div class="stickman-leg-left absolute"></div>
-                <div class="stickman-leg-right absolute"></div>
-            </div>            
         </div>
+        <div class="show stickman" id="stickman-side-view" >
+            <div class="relative"style="relative">
+                <div class="stickman-head absolute"></div>
+                <div class="stickman-neck  absolute"></div>
+                <div class="stickman-arm-leftcont absolute">
+                    <div class="stickman-arm-left absolute"></div>
+                </div>
+                <div class="stickman-arm-rightcont absolute">
+                    <div class="stickman-arm-right absolute"></div>
+                </div>
+                <div class="stickman-body absolute"></div>
+                <div class="stickman-pant absolute"></div>
+                <div class="stickman-leg absolute">
+                    <div class="stickman-leg-left absolute"></div>
+                    <div class="stickman-leg-right absolute"></div>
+                </div>            
+            </div>
 
+        </div>    
+</section>
+<div class="controls" style="display:flex; align-items: center;">
+    <div class="commands">
+        <button class="sayHello">Say Hello</button>
     </div>
-    <div class="" id="stickman-side-view" >
-        <div class="relative"style="relative">
-            <div class="stickman-head absolute"></div>
-            <div class="stickman-neck  absolute"></div>
-            <div class="stickman-arm-leftcont absolute">
-                <div class="stickman-arm-left absolute"></div>
-            </div>
-            <div class="stickman-arm-rightcont absolute">
-                <div class="stickman-arm-right absolute"></div>
-            </div>
-            <div class="stickman-body absolute"></div>
-            <div class="stickman-pant absolute"></div>
-            <div class="stickman-leg absolute">
-                <div class="stickman-leg-left absolute"></div>
-                <div class="stickman-leg-right absolute"></div>
-            </div>            
+    <div class="appearance">
+        <h3>Choose Appearance</h3>
+        <div class="form-group">
+            <label for="topColor">Top</label>
+            <input type="color" name="" id="topColor">
         </div>
-
+        <div class="form-group">
+            <label for="skinTone">Skin Color</label>
+            <input type="color">
+        </div>
+        <div class="form-group">
+            <label for="pantTone">Pants Color</label>
+            <input type="color">
+        </div>
     </div>
+</div>
+
 </body>
 
 <script src="index.js"></script>
