@@ -1,12 +1,16 @@
 *{
-    transition: 1s ease-in-out;
+    /* transition: 1s ease-in-out; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+.environment{
+    background-color: var(--bgColor) !important;
 }
 :root{
-    --theme-light:rgb(255, 185, 100);
-    --theme-darker:rgb(255, 213, 0);
-    --pant:rgb(64, 16, 255);
-    --neckTheme:rgb(208, 208, 208);
-    --bg:rgb(2, 0, 43);
+    --topColor:rgb(255, 213, 0);
+    --pantColor:rgb(64, 16, 255);
+    --skinColor:rgb(208, 208, 208);
+    --bgColor:rgb(2, 0, 43);
 }
 #stickman-front-view{
     bottom: calc(0% + 300px);
@@ -24,26 +28,26 @@
 #stickman-front-view .stickman-head{
     min-width: 60px;
     min-height: 60px;
-    background-color: var(--theme-darker);
+    background-color: var(--topColor);
     border-radius:50% 50% 30% 30%;
 }
 #stickman-front-view .stickman-neck{
     height: 30px;
-    background-color: var(--neckTheme);
+    background-color: var(--skinColor);
     width: 20px;
     top: 45px;
     border-radius: 5px 5px 0 0;
 }
 #stickman-front-view .stickman-body{
     height: 80px;
-    background-color: var(--theme-darker);
+    background-color: var(--topColor);
     width: 100px;
     top: calc(75px);
     border-radius:10px 10px 0 0;
 }
 #stickman-front-view .stickman-pant{
     height: 40px;
-    background-color: var(--pant);
+    background-color: var(--pantColor);
     width: 100px;
     top: calc(60px + 45px + 80px - 30px);
     border-radius: 0 0 50px 50px;
@@ -51,7 +55,7 @@
 #stickman-front-view .stickman-arm{
     width: 150px;
     border-radius: 40%;
-    background-color: rgb(120, 120, 120);
+    background-color: var(--skinColor);
     height: 10px;
     top: 80px;
 }
@@ -61,7 +65,7 @@
     height: 20px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--theme-darker);
+    background-color: var(--topColor);
     left: -10px;
     border-radius: 50%;
     position: absolute;
@@ -73,7 +77,7 @@
     height: 20px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--theme-darker);
+    background-color: var(--topColor);
     left: 95%;
     border-radius: 50%;
     position: absolute;
@@ -82,7 +86,7 @@
     height: 8px;
     width: 60px;
     border-radius: 40%;
-    background-color:gray ;
+    background-color:var(--skinColor) ;
     left: 5px;
     transform: rotate(90deg);
     transform-origin: left;
@@ -92,7 +96,7 @@
     height: 8px;
     width: 60px;
     border-radius: 40%;
-    background-color:gray ;
+    background-color:var(--skinColor) ;
     left: 100%;
     transform: rotate(90deg);
     transform-origin: left;
@@ -103,7 +107,7 @@
 #stickman-front-view .stickman-leg{
     width: 50px;
     border-radius: 40%;
-    background-color: var(--bg);
+    background-color: var(--bgColor);
     height: 10px;
     top: calc(60px + 45px + 80px + 40px - 35px);
 }
@@ -113,7 +117,7 @@
     height: 20px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--pant);
+    background-color: var(--pantColor);
     left: -10px;
     border-radius: 50%;
     position: absolute;
@@ -125,7 +129,7 @@
     height: 20px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--pant);
+    background-color: var(--pantColor);
     left: 95%;
     border-radius: 50%;
     position: absolute;
@@ -134,7 +138,7 @@
     height: 10px;
     width: 100px;
     border-radius: 40% 40% 0 0;
-    background-color:gray ;
+    background-color:var(--skinColor) ;
     left: 0;
     transform: rotate(100deg);
     transform-origin: left;
@@ -143,7 +147,7 @@
     height: 10px;
     width: 100px;
     border-radius:  0 0 40% 40%;
-    background-color:gray ;
+    background-color:var(--skinColor) ;
     left: 105%;
     transform: rotate(90deg);
     transform-origin: left;
@@ -151,7 +155,7 @@
 #stickman-side-view{
     bottom: calc(0% + 300px);
     position: absolute;
-    background-color: black;
+    background-color: var(--bgColor);
     width: 100px;
     left: 0%;
 }
@@ -167,19 +171,19 @@
 #stickman-side-view .stickman-head{
     min-width: 60px;
     min-height: 60px;
-    background-color: var(--theme-darker);
+    background-color: var(--topColor);
     border-radius:50% 50% 40% 30%;
 }
 #stickman-side-view .stickman-neck{
     height: 20px;
-    background-color: var(--neckTheme);
+    background-color: var(--skinColor);
     width: 20px;
     top: 60px;
     border-radius: 0px 0px 0 0;
 }
 #stickman-side-view .stickman-body{
     height: 80px;
-    background-color: var(--theme-darker);
+    background-color: var(--topColor);
     width: 100px;
     top: calc(75px);
     border-radius:40px 60px 0 0;
@@ -187,7 +191,7 @@
 }
 #stickman-side-view .stickman-pant{
     height: 40px;
-    background-color: var(--pant);
+    background-color: var(--pantColor);
     width: 100px;
     top: calc(60px + 45px + 80px - 30px);
     border-radius: 0 0 60px 70px;
@@ -196,14 +200,14 @@
 #stickman-side-view .stickman-arm-leftcont{
     width: 10px;
     border-radius: 40%;
-    background-color: rgb(120, 120, 120);
+    background-color: var(--skinColor);
     height: 10px;
     top: 100px;
 }
 #stickman-side-view .stickman-arm-rightcont{
     width: 10px;
     border-radius: 40%;
-    background-color: rgb(120, 120, 120);
+    background-color: var(--skinColor);
     height: 10px;
     top: 100px;
     z-index: -3;
@@ -214,7 +218,7 @@
     height: 20px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--theme-darker);
+    background-color: var(--topColor);
     left: -10px;
     border-radius: 50%;
     position: absolute;
@@ -226,7 +230,7 @@
     height: 20px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--theme-darker);
+    background-color: var(--topColor);
     left: 95%;
     border-radius: 50%;
     position: absolute;
@@ -236,7 +240,7 @@
     height: 10px;
     width: 100px;
     border-radius: 40%;
-    background-color:gray ;
+    background-color:var(--skinColor);
     left: 5px;
     transform: rotate(90deg);
     transform-origin: left;
@@ -247,7 +251,7 @@
     height: 10px;
     width: 100px;
     border-radius: 40%;
-    background-color:gray ;
+    background-color:var(--skinColor) ;
     left: 100%;
     transform: rotate(0deg);
     transform-origin: left;
@@ -260,7 +264,7 @@
 #stickman-side-view .stickman-leg{
     width: 10px;
     border-radius: 40%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--skinColor);
     height: 10px;
     top: calc(60px + 45px + 80px + 40px - 35px);
 }
@@ -270,7 +274,7 @@
     height: 20px;
     top: 50%;
     transform: translateY(-50%);
-    background-color:var(--pant);
+    background-color:var(--pantColor);
     left: -10px;
     border-radius: 50%;
     position: absolute;
@@ -282,7 +286,7 @@
     height: 20px;
     top: 50%;
     transform: translateY(-50%);
-    background-color:var(--pant);
+    background-color:var(--pantColor);
     left: 95%;
     border-radius: 50%;
     position: absolute;
@@ -290,8 +294,8 @@
 #stickman-side-view .stickman-leg-left{
     height: 10px;
     width: 100px;
-    border-radius: 40% 40% 0 0;
-    background-color:gray ;
+    /* border-radius: 40% 40% 0 0; */
+    background-color:var(--skinColor) ;
     left: 0;
     transform: rotate(70deg);
     transform-origin: left;
@@ -300,8 +304,8 @@
 #stickman-side-view .stickman-leg-right{
     height: 10px;
     width: 100px;
-    border-radius:  0 0 40% 40%;
-    background-color:gray ;
+    /* border-radius:  0 0 40% 40%; */
+    background-color:var(--skinColor);
     left: 105%;
     transform: rotate(110deg);
     transform-origin: left;
@@ -320,6 +324,9 @@
     align-items: center;
     justify-content: space-between;
 }
+.flex{
+    display: flex;
+}
 .controls{
     height: 40vh;
     background-color: brown;
@@ -328,13 +335,36 @@
     box-sizing: border-box;
 }
 .commands button{
-    border: 4px solid rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(0, 0, 0, 0.862);
     padding: 10px 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.177);
+    border-radius: 5px;
 }
 .controls>div{
     padding:20px;
     border: 2px rgb(255, 0, 0) dashed;
     min-height: 200px;
     background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.267);
+}
+.chat input, .chat button{
+    padding: 10px;
+    border-radius: 0;
+    border: 1px solid black;
+}
+textarea{
+    border-radius: 0;
+    border: 1px solid black;
+}
+.chat textarea:focus{
+    box-shadow:none;
+    outline: 0;
+}
+.textoptions i{
+    font-size: 30px;
+    margin-right: 10px;
+}
+.textoptions{
+    padding: 20px 0;
 }

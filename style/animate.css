@@ -8,8 +8,8 @@
 }
 
 button:hover{
-    transform: scale(110%);
-    border: 1px dashed rgb(0, 55, 255);
+    background-color: rgba(0, 0, 0, 0.508);
+    color: white;
 }
 @keyframes wavehand {
     0%{
@@ -20,13 +20,12 @@ button:hover{
     }
     100%{
         transform: rotate(-180deg);
-        transition: ease-in;
     }
 }
 @keyframes handsmove {
-    0%{transform:rotate(0deg)}
-    50%{transform: rotate(90deg);}
-    100%{transform: rotate(0deg);}
+    0%{transform:rotate(30deg)}
+    50%{transform: rotate(110deg);}
+    100%{transform: rotate(30deg);}
 }
 @keyframes legsmove {
     0%{transform:rotate(60deg);}

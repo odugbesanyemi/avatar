@@ -6,27 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/animate.css">
+    <link rel="stylesheet" href="style/component.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
     <title>Document</title>
 </head>
 <body>
-<section class="environment" style="position: relative; ">
-        <div class="hide stickman" id="stickman-front-view">
-            <div class="relative" style="position: relative;">
-                <div class="stickman-head absolute"></div>
-                <div class="stickman-neck  absolute"></div>
-                <div class="stickman-arm absolute">
-                    <div class="stickman-arm-left absolute"></div>
-                    <div class="stickman-arm-right absolute"></div>
+<section class="environment" style="position: relative;">
+        <div class="show stickman" id="stickman-front-view">
+            <div class="relative" style="position:relative">
+                <div class="stickman-head top absolute"></div>
+                <div class="stickman-neck skin absolute"></div>
+                <div class="stickman-arm skin absolute">
+                    <div class="stickman-arm-left skin absolute"></div>
+                    <div class="stickman-arm-right skin absolute"></div>
                 </div>
-                <div class="stickman-body absolute"></div>
-                <div class="stickman-pant absolute"></div>
-                <div class="stickman-leg absolute">
-                    <div class="stickman-leg-left absolute"></div>
-                    <div class="stickman-leg-right absolute"></div>
+                <div class="stickman-body top absolute"></div>
+                <div class="stickman-pant pant absolute"></div>
+                <div class="stickman-leg bg absolute">
+                    <div class="stickman-leg-left skin absolute"></div>
+                    <div class="stickman-leg-right skin absolute"></div>
                 </div>            
             </div>
         </div>
-        <div class="show stickman" id="stickman-side-view" >
+        <div class="hide stickman" id="stickman-side-view" >
             <div class="relative"style="relative">
                 <div class="stickman-head absolute"></div>
                 <div class="stickman-neck  absolute"></div>
@@ -49,6 +51,19 @@
 <div class="controls" style="display:flex; align-items: center;">
     <div class="commands">
         <button class="sayHello">Say Hello</button>
+        <div class="move" style="margin-top:10px">
+            <button class="leftMove"> <<  </button>
+            <button class="rightMove"> >> </button>
+        </div>
+        <div class="flex">
+            <p>talk</p>
+            <label for="switch" class="switch">
+                <input type="checkbox" name="" id="switch">
+                <span class="slider"></span>           
+            </label>         
+            <p>Walk</p>   
+        </div>
+
     </div>
     <div class="appearance">
         <h3>Choose Appearance</h3>
@@ -58,16 +73,34 @@
         </div>
         <div class="form-group">
             <label for="skinTone">Skin Color</label>
-            <input type="color">
+            <input type="color" id="skinColor">
         </div>
         <div class="form-group">
             <label for="pantTone">Pants Color</label>
-            <input type="color">
+            <input type="color" id="pantColor">
         </div>
+        <div class="form-group">
+            <label for="pantTone">Background</label>
+            <input type="color" id="bgColor">
+        </div>
+    </div>
+    <div class="chat">
+        <div class="form">
+            <div class="form-group">
+                <textarea id="chatMsg"></textarea>
+                <button id="chatBtn">Send</button>
+            </div>
+        </div>
+        <div class="textoptions">
+            <i class="fa fa-smile-o" aria-hidden="true" style="color:black"></i>
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            <i class="fa fa-video-camera" aria-hidden="true"></i>
+        </div>
+        <div class="emoji-show"></div>
     </div>
 </div>
 
 </body>
-
 <script src="index.js"></script>
 </html>
