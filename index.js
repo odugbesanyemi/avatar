@@ -41,7 +41,9 @@ _switch.onchange =()=>{
 // on send of the message, message should sent as an object to the global chatmsg object
 let chatMsg = document.querySelector('#chatMsg')
 let chatBtn = document.querySelector('#chatBtn')
-let msgObject = {}
+let msgObject = {
+    msg:[]
+}
 // create function that once called sends the text in the input field to the neccessary place of use
 let processMsg =(text)=>{
     // save the message to an object
@@ -52,7 +54,7 @@ let processMsg =(text)=>{
 
 chatBtn.onclick=(e)=>{
     e.preventDefault()
-    msgObject.Math.random() = JSON.parse(processMsg(chatMsg.value)) ;
-    console.log(msgObject)
-    console.log(msgObject.length)
+    msgObject.msg.push((processMsg(chatMsg.value))) ;
+    console.log(msgObject.msg)
+    console.log(msgObject.msg.length)
 }
